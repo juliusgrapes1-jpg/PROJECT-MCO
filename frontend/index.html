@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Login</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0b168f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.page-container {
+    width: 80%;
+    max-width: 600px;
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 40px 20px;
+}
+
+.form-card {
+    width: 350px;
+    margin: auto;
+    background: #aee2ff;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 6px;
+    border: 1px solid #5f93b4;
+}
+
+.btn {
+    width: 100%;
+    padding: 12px;
+    background: #163c7a;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background: #0f2f5f;
+}
+
+.error-msg {
+    color: red;
+    font-size: 12px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="page-container">
+
+    <div class="form-card">
+
+        <h2>LOGIN</h2>
+
+        <!-- USER INPUT = ID NUMBER -->
+        <input type="text" id="username" placeholder="ID Number">
+
+        <!-- PASSWORD = BIRTHDATE -->
+        <input type="date" id="password">
+
+        <div class="error-msg" id="error-msg"></div>
+
+        <button class="btn" onclick="validateLogin()">Login</button>
+
+        <a href="register.html">
+            <button class="btn" type="button">Register</button>
+        </a>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Event Details</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background: linear-gradient(135deg, #ffffff, #d9ecff, #4f9cff);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding:20px;
+}
+
+/* BACK BUTTON */
+.back-btn{
+    align-self:flex-start;
+    background:#1e5eff;
+    color:white;
+    border:none;
+    padding:10px 18px;
+    border-radius:12px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+    margin-bottom:15px;
+}
+
+.back-btn:hover{
+    background:#3b77ff;
+    transform:translateY(-2px);
+}
+
+/* TITLE */
+.title{
+    background:#0b2a5b;
+    color:white;
+    padding:12px 30px;
+    border-radius:15px;
+    font-weight:bold;
+    font-size:20px;
+    margin-bottom:20px;
+    box-shadow:0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* CARD */
+.card{
+    width:650px;
+    background: linear-gradient(145deg, #ffffff, #cfe6ff);
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+    border:1px solid rgba(0,0,0,0.08);
+    transition:0.3s ease;
+}
+
+.card:hover{
+    transform: translateY(-5px);
+}
+
+/* IMAGE */
+.card img{
+    width:100%;
+    height:320px;
+    object-fit:cover;
+    border-bottom:1px solid rgba(0,0,0,0.1);
+}
+
+/* EVENT NAME */
+.heading{
+    text-align:center;
+    font-size:20px;
+    font-weight:bold;
+    color:#0b2a5b;
+    padding:12px;
+}
+
+/* CONTENT */
+.card-content{
+    padding:20px;
+}
+
+/* ABOUT TEXT */
+.card-content p{
+    font-size:14px;
+    line-height:1.6;
+    color:#333;
+    margin-bottom:15px;
+}
+
+/* INFO ROWS */
+.info-row{
+    display:flex;
+    gap:10px;
+    margin-top:10px;
+    align-items:center;
+}
+
+.label{
+    font-weight:bold;
+    color:#0b2a5b;
+    min-width:110px;
+}
+
+/* VALUE BOX STYLE */
+.info-value{
+    background:#1e5eff;
+    color:white;
+    padding:6px 12px;
+    border-radius:10px;
+    font-size:13px;
+}
+
+/* LOCATION SPECIAL */
+.location-text{
+    background:#0b2a5b;
+    color:white;
+    padding:6px 12px;
+    border-radius:10px;
+    font-size:13px;
+}
+</style>
+</head>
+
+<body>
+
+<button class="back-btn" onclick="window.location.href='Homepage.html'">⬅ Back</button>
+
+<div class="title">EVENT DETAILS</div>
+
+<div class="card">
+
+    <img src="Volleyball.jpg" alt="Volleyball Event">
+
+    <div class="heading">VOLLEYBALL</div>
+
+    <div class="card-content">
+
+        <p>
+            Volleyball events promote teamwork, discipline, and school spirit through competitive tournaments.
+            These activities bring together students from different departments to showcase talent, build camaraderie,
+            and encourage physical fitness.
+        </p>
+
+        <div class="info-row">
+            <div class="label">Location:</div>
+            <div class="location-text">Volleyball Court, UEP Campus</div>
+        </div>
+
+        <div class="info-row">
+            <div class="label">Start Time:</div>
+            <div class="info-value">8:00 AM - 5:00 PM</div>
+        </div>
+
+        <div class="info-row">
+            <div class="label">Start Date:</div>
+            <div class="info-value">January 26, 2026</div>
+        </div>
+
+        <div class="info-row">
+            <div class="label">End Date:</div>
+            <div class="info-value">January 28, 2026</div>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>

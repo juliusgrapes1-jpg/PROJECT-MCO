@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Attendance Records</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family:Arial;
+    background:#0f172a;
+    color:white;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:30px auto;
+    background:#1e293b;
+    padding:25px;
+    border-radius:20px;
+}
+
+h1{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.search-box{
+    width:100%;
+    padding:12px;
+    border-radius:10px;
+    border:none;
+    margin-bottom:20px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th{
+    background:#2563eb;
+    padding:15px;
+}
+
+td{
+    padding:12px;
+    border:1px solid #334155;
+    text-align:center;
+}
+
+tr:nth-child(even){
+    background:#243447;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    background:#2563eb;
+    padding:12px 18px;
+    border-radius:10px;
+    color:white;
+    text-decoration:none;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Attendance Records</h1>
+
+<input type="text"
+id="searchInput"
+class="search-box"
+placeholder="Search student..."
+onkeyup="searchRecords()">
+
+<table>
+
+<thead>
+<tr>
+<th>Event</th>
+<th>Name</th>
+<th>ID</th>
+<th>Birthdate</th>
+<th>Email</th>
+</tr>
+</thead>
+
+<tbody id="recordsTable">
+</tbody>
+
+</table>
+
+<a href="Homepage.html" class="btn">Back</a>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

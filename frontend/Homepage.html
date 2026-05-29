@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Homepage</title>
+
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    font-family:"Segoe UI", Arial, sans-serif;
+}
+
+body{
+    min-height:100vh;
+    color:#0f172a;
+
+    background: linear-gradient(
+        135deg,
+        #ffffff 0%,
+        #f1f7ff 40%,
+        #dbeafe 100%
+    );
+
+    background-attachment: fixed;
+}
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:
+        radial-gradient(circle at 20% 20%, rgba(59,130,246,0.15), transparent 40%),
+        radial-gradient(circle at 80% 70%, rgba(147,197,253,0.20), transparent 45%);
+    pointer-events:none;
+}
+
+/* PAGE WRAPPER */
+.page-container{
+    min-height:100vh;
+    padding-bottom:40px;
+}
+
+.navbar{
+    height:70px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 20px;
+
+    background: #0b2a5b;   /* dark blue */
+    box-shadow:0 6px 20px rgba(0,0,0,0.25);
+}
+
+/* LOGO */
+.nav-left img{
+    width:45px;
+    border-radius:8px;
+}
+
+/* CENTER NAV */
+.nav-center{
+    display:flex;
+    gap:10px;
+    align-items:center;
+}
+
+/* NAV BUTTONS */
+.nav-btn{
+    padding:8px 14px;
+    border-radius:14px;
+    background: rgba(255,255,255,0.12);
+    color:white;
+    text-decoration:none;
+    border:1px solid rgba(255,255,255,0.15);
+    transition:0.3s;
+    font-size:13px;
+}
+
+.nav-btn:hover{
+    background:#3b82f6;
+    transform:translateY(-2px);
+}
+
+/* DROPDOWN */
+.dropdown{
+    position:relative;
+}
+
+.dropdown-content{
+    display:none;
+    position:absolute;
+    top:40px;
+    background:white;
+    border-radius:10px;
+    overflow:hidden;
+    min-width:180px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+.dropdown-content a{
+    display:block;
+    padding:10px;
+    text-decoration:none;
+    color:#0f172a;
+    font-size:13px;
+}
+
+.dropdown-content a:hover{
+    background:#f1f5ff;
+}
+
+.dropdown:hover .dropdown-content{
+    display:block;
+}
+
+/* RIGHT SIDE */
+.nav-right{
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+.search-box{
+    padding:6px 10px;
+    border-radius:15px;
+    border:none;
+    outline:none;
+    font-size:13px;
+}
+
+.search-icon{
+    width:34px;
+    height:34px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    background:#3b82f6;
+    color:white;
+    cursor:pointer;
+}
+
+/* LOGOUT */
+.logout-btn{
+    padding:8px 14px;
+    background:#ef4444;
+    color:white;
+    border-radius:14px;
+    border:none;
+    cursor:pointer;
+    font-size:13px;
+    transition:0.3s;
+}
+
+.logout-btn:hover{
+    background:#dc2626;
+}
+
+/* TITLE */
+.section-title{
+    width:300px;
+    margin:25px auto;
+    text-align:center;
+    padding:10px;
+    border-radius:18px;
+
+    background:white;
+    border:1px solid #dbeafe;
+    box-shadow:0 5px 15px rgba(0,0,0,0.05);
+
+    font-size:16px;
+    font-weight:bold;
+}
+
+/* EVENTS */
+.events-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:20px;
+    padding:20px 40px;
+}
+
+/* CARD */
+.event-card{
+    background:white;
+    border-radius:16px;
+    overflow:hidden;
+    box-shadow:0 6px 18px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.event-card:hover{
+    transform:translateY(-5px);
+}
+
+.event-img{
+    width:100%;
+    height:170px;
+    object-fit:cover;
+}
+
+.event-info{
+    padding:12px;
+}
+
+.event-title{
+    font-size:16px;
+    font-weight:bold;
+    margin-bottom:8px;
+}
+
+.event-info p{
+    font-size:12px;
+    color:#475569;
+    margin:4px 0;
+}
+
+.event-btn{
+    display:block;
+    margin-top:10px;
+    padding:8px;
+    text-align:center;
+    background:#3b82f6;
+    color:white;
+    border-radius:12px;
+    text-decoration:none;
+    font-size:13px;
+}
+
+.event-btn:hover{
+    background:#2563eb;
+}
+</style>
+</head>
+
+<body>
+
+<div class="page-container">
+
+<!-- NAVBAR -->
+<div class="navbar">
+
+    <div class="nav-left">
+        <img src="event.jpg" alt="Logo">
+    </div>
+
+    <div class="nav-center">
+        <a class="nav-btn" href="Homepage.html">Home</a>
+        <a class="nav-btn" href="Gallery.html">Event Photo</a>
+
+        <div class="dropdown">
+            <a class="nav-btn" href="#">Attendance ▾</a>
+            <div class="dropdown-content">
+                <a href="Attendance list.html">Take Attendance</a>
+                <a href="AttendanceRecords.html">Attendance Records</a>
+            </div>
+        </div>
+
+        <a class="nav-btn" href="Event Calendar.html">Event Calendar</a>
+    </div>
+
+    <div class="nav-right">
+        <input class="search-box" id="searchInput" placeholder="Search Events...">
+        <div class="search-icon" onclick="searchEvents()">🔍</div>
+
+        <button class="logout-btn" onclick="logoutUser()">Logout</button>
+    </div>
+
+</div>
+
+<!-- TITLE -->
+<div class="section-title">Upcoming Events</div>
+
+<!-- EVENTS -->
+<div class="events-container">
+
+    <div class="event-card">
+        <img class="event-img" src="Volleyball.jpg">
+        <div class="event-info">
+            <div class="event-title">Volleyball Tournament</div>
+            <p>📍 Court Area</p>
+            <p>📅 Jan 28–30</p>
+            <a class="event-btn" href="Event Details1.html">View Details</a>
+        </div>
+    </div>
+
+</div>
+
+</div>
+
+<script>
+function searchEvents(){
+    let input = document.getElementById("searchInput").value.toLowerCase();
+    let cards = document.querySelectorAll(".event-card");
+
+    cards.forEach(card=>{
+        let title = card.querySelector(".event-title").innerText.toLowerCase();
+        card.style.display = title.includes(input) ? "block" : "none";
+    });
+}
+
+function logoutUser(){
+    let confirmLogout = confirm("Are you sure you want to log out?");
+    if(confirmLogout){
+        localStorage.removeItem("currentUser");
+        window.location.href = "index.html";
+    }
+}
+</script>
+
+</body>
+</html>

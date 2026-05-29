@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Event Photos</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background: linear-gradient(135deg, #ffffff, #d9ecff, #4f9cff);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding:20px;
+}
+
+/* NAVBAR */
+.navbar{
+    width:100%;
+    max-width:1200px;
+    background:#0b2a5b;
+    padding:15px 20px;
+    border-radius:15px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    box-shadow:0 6px 15px rgba(0,0,0,0.2);
+    margin-bottom:25px;
+}
+
+.navbar h2{
+    color:white;
+    font-size:18px;
+    font-weight:bold;
+}
+
+/* BACK BUTTON */
+.back-btn{
+    background:#1e5eff;
+    border:none;
+    color:white;
+    padding:10px 18px;
+    border-radius:12px;
+    cursor:pointer;
+    transition:0.3s;
+    font-weight:bold;
+}
+
+.back-btn:hover{
+    background:#3b77ff;
+    transform: translateY(-2px);
+}
+
+/* TITLE */
+.title{
+    font-size:26px;
+    font-weight:bold;
+    color:#0b2a5b;
+    margin-bottom:25px;
+    background: rgba(255,255,255,0.6);
+    padding:10px 25px;
+    border-radius:15px;
+    border:1px solid rgba(0,0,0,0.1);
+}
+
+/* GRID */
+.events-container{
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap:25px;
+    width:100%;
+    max-width:1000px;
+}
+
+/* LINK RESET (IMPORTANT) */
+.event-link{
+    text-decoration:none;
+    color:inherit;
+}
+
+/* CARD */
+.event-card{
+    border-radius:18px;
+    background: linear-gradient(145deg, #ffffff, #cfe6ff);
+    border:1px solid rgba(0,0,0,0.08);
+    overflow:hidden;
+    box-shadow:0 6px 15px rgba(0,0,0,0.12);
+    transition:0.35s ease;
+    display:flex;
+    flex-direction:column;
+}
+
+/* HOVER EFFECT */
+.event-card:hover{
+    transform: translateY(-10px) scale(1.02);
+    box-shadow:0 15px 30px rgba(0,0,0,0.25);
+}
+
+/* IMAGE */
+.event-card img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+    border-bottom:1px solid rgba(0,0,0,0.08);
+}
+
+/* TEXT */
+.event-name{
+    text-align:center;
+    font-weight:bold;
+    font-size:17px;
+    padding:14px;
+    color:white;
+    background:#1e5eff;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <h2>Event Gallery</h2>
+    <button class="back-btn" onclick="window.location.href='Homepage.html'">
+        ⬅ Back
+    </button>
+</div>
+
+<div class="title">Event Photos</div>
+
+<!-- GRID -->
+<div class="events-container">
+
+    <!-- VOLLEYBALL -->
+    <a class="event-link" href="Event Details1.html">
+        <div class="event-card">
+            <img src="Volleyball.jpg">
+            <div class="event-name">Volleyball</div>
+        </div>
+    </a>
+
+    <!-- SEMINAR -->
+    <a class="event-link" href="Event Details2.html">
+        <div class="event-card">
+            <img src="seminar.jpg">
+            <div class="event-name">Seminar</div>
+        </div>
+    </a>
+
+    <!-- ACQUAINTANCE -->
+    <a class="event-link" href="Event Details3.html">
+        <div class="event-card">
+            <img src="acquantance party.jpg">
+            <div class="event-name">Acquaintance Party</div>
+        </div>
+    </a>
+
+    <!-- CULTURE NIGHT -->
+    <a class="event-link" href="Event Details4.html">
+        <div class="event-card">
+            <img src="culture night.jpg">
+            <div class="event-name">Culture Night</div>
+        </div>
+    </a>
+
+</div>
+
+</body>
+</html>
