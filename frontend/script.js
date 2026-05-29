@@ -1,3 +1,5 @@
+const API_BASE_URL = 'https://project-mco.onrender.com';
+
 /* REGISTER USER */
 async function registerUser() {
     const birthdate = document.getElementById("birthdate")?.value.trim();
@@ -10,7 +12,7 @@ async function registerUser() {
     }
 
     try {
-        const response = await fetch('http://localhost:5000/api/register', {
+        const response = await fetch(`${API_BASE_URL}/api/register`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ idnum, birthdate, email })
@@ -31,7 +33,7 @@ async function validateLogin() {
     const errorMsg = document.getElementById("error-msg");
 
     try {
-        const response = await fetch('http://localhost:5000/api/login', {
+        const response = await fetch(`${API_BASE_URL}/api/login`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ username, password })
@@ -70,7 +72,7 @@ async function saveAttendance() {
         }
     });
 
-    await fetch('http://localhost:5000/api/attendance', {
+    await fetch(`${API_BASE_URL}/api/attendance`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(attendanceList)
@@ -85,7 +87,7 @@ async function loadRecords() {
     let table = document.getElementById("recordsTable");
     if (!table) return;
 
-    const response = await fetch('http://localhost:5000/api/records');
+    const response = await fetch(`${API_BASE_URL}/api/records`);
     const data = await response.json();
 
     table.innerHTML = "";
@@ -107,7 +109,6 @@ async function loadRecords() {
     });
 }
 
-// Keep your existing clearAttendance and searchRecords functions below...
 function clearAttendance() {
     document.querySelectorAll("td[contenteditable]").forEach(td => td.innerText = "");
 }
