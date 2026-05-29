@@ -5,7 +5,9 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// This makes the "Cannot GET /" message go away
+// Dynamic Port for Render
+const PORT = process.env.PORT || 5000;
+
 app.get('/', (req, res) => {
     res.send('Attendance API is online!');
 });
@@ -28,7 +30,7 @@ app.post('/api/login', (req, res) => {
     res.json(user ? { success: true } : { success: false, message: "Invalid ID or Birthdate" });
 });
 
-// Save Attendance: Adds to the records
+// Save Attendance
 app.post('/api/attendance', (req, res) => {
     attendance.push(...req.body);
     res.json({ message: "Attendance Saved!" });
@@ -39,4 +41,4 @@ app.get('/api/records', (req, res) => {
     res.json(attendance);
 });
 
-app.listen(5000, () => console.log("Server running on http://localhost:5000"));
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
