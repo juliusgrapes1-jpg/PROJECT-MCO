@@ -1,4 +1,7 @@
-const API_BASE_URL = 'https://project-mco.onrender.com';
+// Automatically detects environment
+const API_BASE_URL = window.location.hostname === 'localhost' 
+    ? 'http://localhost:5000' 
+    : 'https://project-mco.onrender.com';
 
 /* REGISTER USER */
 async function registerUser() {
